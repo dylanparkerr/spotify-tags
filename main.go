@@ -7,6 +7,9 @@ import (
 
 func main() {
 	cfg := config.NewConfig()
-	key := cfg.ApiKey
-	fmt.Println(key)
+	id := cfg.ClientID
+	secret := cfg.ClientSecret
+
+	fmt.Printf("id: %s\n", id)
+	fmt.Printf("secret:%s\n", secret)
 }

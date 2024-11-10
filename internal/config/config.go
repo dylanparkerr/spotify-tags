@@ -6,7 +6,8 @@ import (
 )
 
 type Config struct {
-	ApiKey string
+	ClientID     string
+	ClientSecret string
 }
 
 func NewConfig() Config {
@@ -21,6 +22,7 @@ func NewConfig() Config {
 	}
 
 	return Config{
-		ApiKey: viper.GetString("spotify.apikey"),
+		ClientID:     viper.GetString("spotify.client.id"),
+		ClientSecret: viper.GetString("spotify.client.secret"),
 	}
 }
