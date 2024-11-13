@@ -7,5 +7,7 @@ import (
 
 func main() {
 	fmt.Println("starting...")
-	auth.GetPlaylists()
+
+	token := auth.GetAccessToken()
+	auth.GetPlaylists(token)
 }
