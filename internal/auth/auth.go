@@ -60,7 +60,9 @@ func GetAccessToken() *AccessToken {
 }
 
 func GetPlaylists(token *AccessToken) {
-	user := "dylanparkerrr"
+	// lmaooo what is this username? why is it like this?
+	// need to look at getting my account off of my edu email and and a real user name
+	user := "7h0rgmkyhqtd6arkkcyumc36h"
 
 	// form req
 	url := fmt.Sprintf("https://api.spotify.com/v1/users/%s/playlists", user)
@@ -85,13 +87,6 @@ func GetPlaylists(token *AccessToken) {
 	if err != nil {
 		fmt.Println(err)
 	}
-
-	/*
-		right now this is giving me a 404
-
-        if i use my old spotify dylanparkerr i get a resp
-        maybe need to make my account public? or get proper auth?
-	*/
 
 	fmt.Println(string(body))
 }
